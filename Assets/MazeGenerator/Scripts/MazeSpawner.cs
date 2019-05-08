@@ -78,10 +78,8 @@ public class MazeSpawner : MonoBehaviour {
 					tmp.transform.localScale += new Vector3(0, 3, 0);
 					tmp.transform.parent = transform;
 				}
-				if(cell.IsGoal && GoalPrefab != null){
-					
-				}
-				if(Random.value < 0.1){
+
+				if(row == Rows-1 && column == Columns-1){
 					tmp = Instantiate(GoalPrefab,new Vector3(x,1,z), Quaternion.Euler(0,0,0)) as GameObject;
 					tmp.transform.parent = transform;
 				}
