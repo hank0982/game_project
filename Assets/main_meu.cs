@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class main_meu : MonoBehaviour
 {
     public void PlayGame()
@@ -14,7 +13,9 @@ public class main_meu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quit Game");
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#endif
         Application.Quit();
        
     }
