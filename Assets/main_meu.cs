@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class main_meu : MonoBehaviour
 {
+    public void Start()
+    {
+        PlayerPrefs.SetInt("level", 5);    
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
