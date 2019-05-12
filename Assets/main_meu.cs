@@ -6,7 +6,7 @@ public class main_meu : MonoBehaviour
 {
     public void Start()
     {
-        PlayerPrefs.SetInt("level", 5);    
+        PlayerPrefs.SetInt("level", 1);    
     }
 
     public void PlayGame()

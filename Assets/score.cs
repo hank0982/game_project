@@ -16,7 +16,7 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        level = PlayerPrefs.GetInt("level") / 5;
+        level = PlayerPrefs.GetInt("level");
         scoreLabel.SetText("Level " + level);
     }
 }
