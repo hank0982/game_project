@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using UnityEngine.UI;
 
 //<summary>
 //Game object, that creates maze and instantiates it in scene
@@ -25,12 +27,25 @@ public class MazeSpawner : MonoBehaviour {
 	public float CellHeight = 5;
 	public bool AddGaps = true;
 	public GameObject GoalPrefab = null;
-
 	private BasicMazeGenerator mMazeGenerator = null;
 
 	void Start () {
-		if (!FullRandom) {
-			Random.seed = RandomSeed;
+
+        try
+        {
+            Debug.Log("level: " + PlayerPrefs.GetInt("level"));
+            Rows = PlayerPrefs.GetInt("level");
+            Columns = PlayerPrefs.GetInt("level");
+        }
+        catch(Exception e)
+        {
+            Debug.Log("Cannot get int level!");
+            PlayerPrefs.SetInt("level", 5);
+            Debug.Log("set level: " + PlayerPrefs.GetInt("level"));
+        }
+
+        if (!FullRandom) {
+            UnityEngine.Random.seed = RandomSeed;
 		}
 		switch (Algorithm) {
 		case MazeGenerationAlgorithm.PureRecursive:
