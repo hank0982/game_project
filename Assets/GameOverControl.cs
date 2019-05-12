@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class main_meu : MonoBehaviour
+public class GameOverControl : MonoBehaviour
 {
-    public void Start()
-    {
-        PlayerPrefs.SetInt("level", 5);    
-    }
-
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
 
     }
 
@@ -22,6 +17,6 @@ public class main_meu : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
         Application.Quit();
-       
+
     }
 }

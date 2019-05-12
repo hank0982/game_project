@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using UnityEngine.UI;
 
 //<summary>
 //Game object, that creates maze and instantiates it in scene
@@ -29,8 +31,20 @@ public class MazeSpawner : MonoBehaviour {
     private BasicMazeGenerator mMazeGenerator = null;
 
     void Start () {
+        try
+        {
+            Debug.Log("level: " + PlayerPrefs.GetInt("level"));
+            Rows = (PlayerPrefs.GetInt("level")+1)*5;
+            Columns = (PlayerPrefs.GetInt("level") + 1) * 5;
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Cannot get int level!");
+            PlayerPrefs.SetInt("level", 0);
+            Debug.Log("set level: " + PlayerPrefs.GetInt("level"));
+        }
         if (!FullRandom) {
-            Random.seed = RandomSeed;
+            UnityEngine.Random.InitState(RandomSeed);
         }
         switch (Algorithm) {
         case MazeGenerationAlgorithm.PureRecursive:
@@ -56,9 +70,9 @@ public class MazeSpawner : MonoBehaviour {
                 float z = row*(CellHeight+(AddGaps?.2f:0));
                 MazeCell cell = mMazeGenerator.GetMazeCell(row,column);
                 GameObject tmp;
-                GameObject randomFloor = Floor[(Random.Range(0, Floor.Length))];
+                GameObject randomFloor = Floor[(UnityEngine.Random.Range(0, Floor.Length))];
                 int[] rotation = { 0, 90, 180, 270 };
-                int rotationResult = rotation[Random.Range(0, 4)];
+                int rotationResult = rotation[UnityEngine.Random.Range(0, 4)];
                 tmp = Instantiate(randomFloor, new Vector3(x,0,z), Quaternion.Euler(0, rotationResult, 0)) as GameObject;
                 tmp.transform.parent = transform;
                 if(cell.WallRight){
