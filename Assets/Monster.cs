@@ -26,6 +26,8 @@ public class Monster : MonoBehaviour
 
     private void Start()
     {
+        int level = PlayerPrefs.GetInt("level");
+
         monStrength = defaultStrenght;
         monHealth = defaultHealth;
     }
