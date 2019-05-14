@@ -98,7 +98,9 @@ Material:
     - _Parallax: 0.02
     - _Rotation: 0
     - _SrcBlend: 1
+    - _SunDisk: 2
     - _SunSize: 0.05
+    - _SunSizeConvergence: 5
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -107,4 +109,4 @@ Material:
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _GroundColor: {r: 0.93885595, g: 0.7297772, b: 0.7575031, a: 0.9999974}
     - _SkyTint: {r: 0.68458563, g: 0.60406744, b: 0.7572453, a: 0.9999974}
-    - _Tint: {r: 0.05811022, g: 0.05811022, b: 0.05811022, a: 0}
+    - _Tint: {r: 0.60415304, g: 0.55836886, b: 0.60738206, a: 0.99999946}

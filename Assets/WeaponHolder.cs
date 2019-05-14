@@ -67,6 +67,21 @@ public class WeaponHolder : MonoBehaviour
             bullet.GetComponent<Rigidbody>().mass = 1;
             bullet.GetComponent<Rigidbody>().AddForce(playerTransform.forward * shurikenForwardForce);
         }
+        if(selectedWeapon == 0)
+        {
+            int SwordLevel = PlayerPrefs.GetInt("SwordLevel");
+            if(SwordLevel == 0)
+            {
+                GameObject partical = (GameObject)Resources.Load("WeaponEffect/CFX4HitPaintC", typeof(GameObject));
+                GameObject Weapon = transform.GetChild(0).gameObject;
+                GameObject bullet = Instantiate(partical, Weapon.transform.position, Quaternion.identity);
+            }else if (SwordLevel == 1)
+            {
+                GameObject partical = (GameObject)Resources.Load("WeaponEffect/CFX2_Big_Splash", typeof(GameObject));
+                GameObject Weapon = transform.GetChild(0).gameObject;
+                GameObject bullet = Instantiate(partical, playerTransform.position+playerTransform.forward, Quaternion.LookRotation(-playerTransform.forward));
+            }
+        }
         isAttacking = false;
     }
    
