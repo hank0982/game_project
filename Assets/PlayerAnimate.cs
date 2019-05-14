@@ -24,7 +24,7 @@ public class PlayerAnimate : MonoBehaviour
     }
     IEnumerator AttackRoutine()
     {
-        int randomAttack = Random.Range(1, 4);
+        int randomAttack = Random.Range(1, 3);
         Debug.Log(randomAttack);
         animator.SetInteger(Animator.StringToHash("Condition"), randomAttack);
         yield return new WaitForSeconds(0.5f);
