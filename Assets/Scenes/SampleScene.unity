@@ -1933,7 +1933,7 @@ PrefabInstance:
     - target: {fileID: 2811811777053104755, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: shurikenForwardForce
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2811811777053104755, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
