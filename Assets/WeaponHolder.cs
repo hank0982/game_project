@@ -19,12 +19,12 @@ public class WeaponHolder : MonoBehaviour
         if(Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             selectedWeapon++;
-            selectedWeapon %= transform.childCount + 1;
+            selectedWeapon %= transform.childCount;
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             selectedWeapon--;
-            selectedWeapon %= transform.childCount + 1;
+            selectedWeapon %= transform.childCount;
         }
         if(previousSelectedWeapon != selectedWeapon)
         {
