@@ -7,6 +7,8 @@ public class PlayerAnimate : MonoBehaviour
     [SerializeField] private KeyCode attackKey;
     private Animator animator;
     private bool isAttacking = false;
+    public AudioClip[] playerMusicClip;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,11 @@ public class PlayerAnimate : MonoBehaviour
         {
             StartCoroutine("AttackRoutine");
             isAttacking = true;
+            int randomAttackMusicClip = Random.Range(0, 4);
+            audioSource.clip = playerMusicClip[randomAttackMusicClip];
+            audioSource.Play();
+            
+            
         }
 
     }
