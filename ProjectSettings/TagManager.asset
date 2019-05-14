@@ -7,6 +7,10 @@ TagManager:
   - Fire
   - Coin
   - Floor
+  - FxTemporaire
+  - Waypoints
+  - SpawningPoint
+  - Weapon
   layers:
   - Default
   - TransparentFX

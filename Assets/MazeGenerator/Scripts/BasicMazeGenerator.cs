@@ -33,9 +33,7 @@ public abstract class BasicMazeGenerator {
 
 	public MazeCell GetMazeCell(int row, int column){
 		if (row >= 0 && column >= 0 && row < mMazeRows && column < mMazeColumns) {
-            Debug.Log(mMaze.Length);
-            Debug.Log(row);
-            Debug.Log(column);
+
             return mMaze[row,column];
 		}else{
 			Debug.Log(row+" "+column);
