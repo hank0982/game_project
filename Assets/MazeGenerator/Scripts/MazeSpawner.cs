@@ -34,13 +34,13 @@ public class MazeSpawner : MonoBehaviour {
         try
         {
             Debug.Log("level: " + PlayerPrefs.GetInt("level"));
-            Rows = (PlayerPrefs.GetInt("level")+1) * 5;
-            Columns = (PlayerPrefs.GetInt("level")+1) * 5;
+            Rows = PlayerPrefs.GetInt("level") * 5;
+            Columns = PlayerPrefs.GetInt("level") * 5;
         }
         catch (Exception e)
         {
             Debug.Log("Cannot get int level!");
-            PlayerPrefs.SetInt("level", 0);
+            PlayerPrefs.SetInt("level", 1);
             Debug.Log("set level: " + PlayerPrefs.GetInt("level"));
             Rows = PlayerPrefs.GetInt("level") * 5;
             Columns = PlayerPrefs.GetInt("level") * 5;
