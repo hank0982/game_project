@@ -2654,6 +2654,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: PlayerMusicClip.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: playerMusicClip.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: PlayerMusicClip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72b2811d4057e4fd5ad50c4acd59a132, type: 3}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: PlayerMusicClip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0382ea0749e7941cd850e857d18dbb65, type: 3}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: playerMusicClip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72b2811d4057e4fd5ad50c4acd59a132, type: 3}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: playerMusicClip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0382ea0749e7941cd850e857d18dbb65, type: 3}
+    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: playerMusicClip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f9d2f287451fd406e83ab195e4952a33, type: 3}
     - target: {fileID: 2811811777053104755, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: weaponUI.Array.size
@@ -2719,46 +2759,21 @@ PrefabInstance:
       propertyPath: weapons.Array.data[3]
       value: 
       objectReference: {fileID: 1689134945}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+    - target: {fileID: 2811811776978144845, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
-      propertyPath: PlayerMusicClip.Array.size
-      value: 2
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
-      propertyPath: playerMusicClip.Array.size
-      value: 0
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
-      propertyPath: PlayerMusicClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 72b2811d4057e4fd5ad50c4acd59a132, type: 3}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: PlayerMusicClip.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0382ea0749e7941cd850e857d18dbb65, type: 3}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: audioSource
-      value: 
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: playerMusicClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 72b2811d4057e4fd5ad50c4acd59a132, type: 3}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: playerMusicClip.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0382ea0749e7941cd850e857d18dbb65, type: 3}
-    - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: playerMusicClip.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: f9d2f287451fd406e83ab195e4952a33, type: 3}
     - target: {fileID: 2811811776925856047, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2794,37 +2809,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.653
       objectReference: {fileID: 0}
-    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811776978144845, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 2812037367510517111, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2812037367510517111, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: m_TagString
       value: Weapon
