@@ -2662,7 +2662,7 @@ PrefabInstance:
     - target: {fileID: 2811811777053104755, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: weapons.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2811811777053104755, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
@@ -2714,6 +2714,11 @@ PrefabInstance:
       propertyPath: weapons.Array.data[2]
       value: 
       objectReference: {fileID: 2116072502}
+    - target: {fileID: 2811811777053104755, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: weapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1689134945}
     - target: {fileID: 2811811777490228525, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: PlayerMusicClip.Array.size
