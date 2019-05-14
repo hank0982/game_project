@@ -35,12 +35,8 @@ public class WeaponHolder : MonoBehaviour
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             if (selectedWeapon == 0)
-                selectedWeapon = transform.childCount + 1;
+                selectedWeapon = transform.childCount;
             selectedWeapon--;
-            if(selectedWeapon < 0)
-            {
-                selectedWeapon = transform.childCount-1;
-            }
         }
         if (previousSelectedWeapon != Math.Abs(selectedWeapon))
         {
