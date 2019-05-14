@@ -45,6 +45,8 @@ public class MazeSpawner : MonoBehaviour {
             Rows = PlayerPrefs.GetInt("level") * 5;
             Columns = PlayerPrefs.GetInt("level") * 5;
         }
+        // Rows = 3;
+        // Columns = 3;
         if (!FullRandom) {
             UnityEngine.Random.InitState(RandomSeed);
         }

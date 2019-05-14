@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponHolder : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class WeaponHolder : MonoBehaviour
     public float shurikenForwardForce;
     public Transform playerTransform;
     private bool isAttacking;
+    public Image[] weapons;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +33,12 @@ public class WeaponHolder : MonoBehaviour
             if (selectedWeapon == 0)
                 selectedWeapon = transform.childCount + 1;
             selectedWeapon--;
-            selectedWeapon %= transform.childCount;
+            if(selectedWeapon < 0)
+            {
+                selectedWeapon = transform.childCount-1;
+            }
         }
-        Debug.Log("Player select "+selectedWeapon);
-        if(previousSelectedWeapon != selectedWeapon)
+        if (previousSelectedWeapon != Math.Abs(selectedWeapon))
         {
             SelectWeapon();
         }
@@ -70,7 +75,21 @@ public class WeaponHolder : MonoBehaviour
         int i = 0;
         foreach(Transform weapon in transform)
         {
-            weapon.gameObject.SetActive(i == selectedWeapon);
+            weapon.gameObject.SetActive(i == Math.Abs(selectedWeapon));
+            i++;
+        }
+        i = 0;
+        foreach (Image weapon in weapons)
+        {
+            weapon.GetComponent<Image>();
+            if (i == Math.Abs(selectedWeapon))
+            {
+                weapon.color = Color.yellow;
+            }
+            else
+            {
+                weapon.color = Color.white;
+            }
             i++;
         }                                                                                                                           
     }
