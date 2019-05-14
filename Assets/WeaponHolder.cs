@@ -61,7 +61,7 @@ public class WeaponHolder : MonoBehaviour
         if (selectedWeapon == 3)
         {
             GameObject shootingWeapon = transform.GetChild(3).gameObject;
-            GameObject bullet = Instantiate(shootingWeapon, playerTransform.position + playerTransform.up * 1.2f + playerTransform.forward * 2, Quaternion.identity);
+            GameObject bullet = Instantiate(shootingWeapon, playerTransform.position + playerTransform.up * 0.5f + playerTransform.forward, Quaternion.identity);
             bullet.AddComponent<Rigidbody>();
             bullet.AddComponent<FlyingShurikenScript>();
             bullet.GetComponent<Rigidbody>().mass = 1;

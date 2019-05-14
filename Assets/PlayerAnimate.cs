@@ -21,11 +21,9 @@ public class PlayerAnimate : MonoBehaviour
         {
             StartCoroutine("AttackRoutine");
             isAttacking = true;
-            int randomAttackMusicClip = Random.Range(0, 4);
-            audioSource.clip = playerMusicClip[randomAttackMusicClip];
-            audioSource.Play();
-            
-            
+            //int randomAttackMusicClip = Random.Range(0, 4);
+            //audioSource.clip = playerMusicClip[randomAttackMusicClip];
+            //audioSource.Play();
         }
 
     }
