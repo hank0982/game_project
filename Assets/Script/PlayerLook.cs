@@ -33,21 +33,6 @@ public class PlayerLook : MonoBehaviour
     private void CameraRotation()
     {
         float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
-        xAxisClamp += mouseY;
-        if (xAxisClamp > 90.0f)
-        {
-            xAxisClamp = 90.0f;
-            mouseY = 0.0f;
-            ClampXAxisRotationToValue(270.0f);
-        }
-        else if (xAxisClamp < -90.0f)
-        {
-            xAxisClamp = -90.0f;
-            mouseY = 0.0f;
-            ClampXAxisRotationToValue(90.0f);
-        }
-        transform.Rotate(Vector3.left * mouseY);
 
         playerBody.Rotate(Vector3.up * mouseX);
     }
