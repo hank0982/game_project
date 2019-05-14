@@ -5,14 +5,24 @@ using UnityEngine;
 public class FlyingShurikenScript : MonoBehaviour
 {
     private float lifetime = 5.0f;
-
+    private GameObject obj;
+    private GameObject partical;
     void Start()
     {
         Destroy(gameObject, lifetime);
+        int shurikenLevel = PlayerPrefs.GetInt("ShurikenLevel");
+        if (shurikenLevel == 2)
+        {
+            
+            partical = (GameObject)Resources.Load("WeaponEffect/CFX_ElectricityBall", typeof(GameObject));
+            obj = (GameObject)Instantiate(partical, transform.position, transform.rotation);
+            obj.transform.parent = transform;
+        }
     }
     // Update is called once per frame
     void Update()
     {
-        
+
+       
     }
 }

@@ -16,7 +16,11 @@ public class WeaponHolder : MonoBehaviour
     void Start()
     {
         isAttacking = false;
-        SelectWeapon();   
+        SelectWeapon();
+        PlayerPrefs.SetInt("SwordLevel", 1);
+        PlayerPrefs.SetInt("SpearLevel", 1);
+        PlayerPrefs.SetInt("HammerLevel", 1);
+        PlayerPrefs.SetInt("ShurikenLevel", 1);
     }
 
     // Update is called once per frame
