@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4183373861820410548}
   m_Layer: 0
   m_Name: Mesh1_Plate_Grass_Dirt_Model
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 8735201161631056777}
   m_Layer: 0
   m_Name: Floor3
-  m_TagString: Untagged
+  m_TagString: mazefloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,15 +620,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dc6370ee53e3644b9a2b707f7b689f3, type: 3}
---- !u!4 &330285718278278924 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 8dc6370ee53e3644b9a2b707f7b689f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 330285718278149518}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330285718278181678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8dc6370ee53e3644b9a2b707f7b689f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 330285718278149518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &330285718278278924 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 8dc6370ee53e3644b9a2b707f7b689f3,
     type: 3}
   m_PrefabInstance: {fileID: 330285718278149518}
   m_PrefabAsset: {fileID: 0}
@@ -815,15 +815,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
---- !u!4 &2472852296203739937 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 7b890c2408f392241a25d8720e198c50,
-    type: 3}
-  m_PrefabInstance: {fileID: 2472852296203876771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2472852296203779843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 7b890c2408f392241a25d8720e198c50,
+    type: 3}
+  m_PrefabInstance: {fileID: 2472852296203876771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2472852296203739937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 7b890c2408f392241a25d8720e198c50,
     type: 3}
   m_PrefabInstance: {fileID: 2472852296203876771}
   m_PrefabAsset: {fileID: 0}
@@ -884,15 +884,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397a1bc3035a4b041af7833636a7bf9e, type: 3}
---- !u!4 &4087305049087831710 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 397a1bc3035a4b041af7833636a7bf9e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4087305049087964188}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4087305049088062140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 397a1bc3035a4b041af7833636a7bf9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4087305049087964188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4087305049087831710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 397a1bc3035a4b041af7833636a7bf9e,
     type: 3}
   m_PrefabInstance: {fileID: 4087305049087964188}
   m_PrefabAsset: {fileID: 0}

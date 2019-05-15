@@ -78,6 +78,7 @@ public class MazeSpawner : MonoBehaviour {
                 int[] rotation = { 0, 90, 180, 270 };
                 int rotationResult = rotation[UnityEngine.Random.Range(0, 4)];
                 tmp = Instantiate(randomFloor, new Vector3(x,0,z), Quaternion.Euler(0, rotationResult, 0)) as GameObject;
+                tmp.tag = "Floor";
                 tmp.transform.parent = transform;
                 if(cell.WallRight){
                     tmp = Instantiate(Wall,new Vector3(x+CellWidth/2,0,z)+Wall.transform.position,Quaternion.Euler(0,90,0)) as GameObject;// right

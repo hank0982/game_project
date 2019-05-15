@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4012944113637141047}
   m_Layer: 0
   m_Name: Floor1 1
-  m_TagString: Untagged
+  m_TagString: mazefloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4012944113637141047}
     m_Modifications:
+    - target: {fileID: 100002, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
+      propertyPath: m_Name
+      value: naturePack_057
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -175,10 +183,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
-      propertyPath: m_Name
-      value: naturePack_057
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
       propertyPath: m_LocalScale.x
