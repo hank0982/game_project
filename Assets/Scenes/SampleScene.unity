@@ -2655,6 +2655,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: RPGHeroHP
       objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811776978144845, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812037367510517111, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812037367510517111, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 2813355151834912687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2815,21 +2850,6 @@ PrefabInstance:
       propertyPath: weapons.Array.data[3]
       value: 
       objectReference: {fileID: 1689134945}
-    - target: {fileID: 2811811776978144845, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811776925756687, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 2811811776925856047, guid: 2bc8a3997d648bd4a8b192ecc18057de,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2864,26 +2884,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.653
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812037367510517111, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812037367510517111, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811811775854669372, guid: 2bc8a3997d648bd4a8b192ecc18057de,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bc8a3997d648bd4a8b192ecc18057de, type: 3}
