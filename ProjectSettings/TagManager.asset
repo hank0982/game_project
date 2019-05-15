@@ -12,6 +12,7 @@ TagManager:
   - SpawningPoint
   - Weapon
   - Monster
+  - mazefloor
   layers:
   - Default
   - TransparentFX
