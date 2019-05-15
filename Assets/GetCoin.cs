@@ -18,9 +18,9 @@ public class GetCoin : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("get the coin!");
         if(other.tag == "Player")
         {
+            Debug.Log("get the coin!");
             PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
