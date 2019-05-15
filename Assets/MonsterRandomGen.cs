@@ -34,16 +34,17 @@ public class MonsterRandomGen : MonoBehaviour
     {
         if(respawns == null)
         {
+            int level = PlayerPrefs.GetInt("level");
+            int difficulty = 50 - level * 8;
             respawns = GameObject.FindGameObjectsWithTag("Floor");
             if (respawns.Length == 0)
                 Debug.Log("No game objects are tagged with 'Floor'");
             foreach (GameObject respawn in respawns)
             {
                 int num = Random.Range(0, respawnPrefab.Length + 1);
-                int level = PlayerPrefs.GetInt("level");
-                int difficulty = 60 - level * 5;
+                //Instantiate(respawnPrefab[num], respawn.transform.position, Quaternion.identity);
                 if (Random.Range(0, 100) > difficulty)
-                    Instantiate(respawnPrefab[num], respawn.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                    Instantiate(respawnPrefab[num], respawn.transform.position, Quaternion.identity);
             }
         }
     }
