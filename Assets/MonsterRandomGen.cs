@@ -39,34 +39,11 @@ public class MonsterRandomGen : MonoBehaviour
                 Debug.Log("No game objects are tagged with 'Floor'");
             foreach (GameObject respawn in respawns)
             {
-                //if(Random.Range(0,5) > 3)
-                //{
-                //    GameObject monster = respawnPrefab[Random.Range(0, 3)];
-                //    Instantiate(monster, respawn.transform.position, respawn.transform.rotation);
-                //}
-                //GameObject monster = respawnPrefab[1];
-                //Instantiate(monster, respawn.transform.position, respawn.transform.rotation);
-                Debug.Log("respwans:" + respawn.transform.position);
-                //if(Random.Range(0,10) > 6)
-                //{
-                //    Instantiate(respawnPrefab[0], respawn.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
-                //    continue;
-                //}
-                //if (Random.Range(0, 10) > 7)
-                //{
-                //    Instantiate(respawnPrefab[1], respawn.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
-                //    continue;
-                //}
-                //if (Random.Range(0, 10) > 8)
-                //{
-                //    Instantiate(respawnPrefab[2], respawn.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
-                //    continue;
-                //}
                 int num = Random.Range(0, respawnPrefab.Length + 1);
-                if (Random.Range(0, 10) > 8)
+                int level = PlayerPrefs.GetInt("level");
+                int difficulty = 60 - level * 5;
+                if (Random.Range(0, 100) > difficulty)
                     Instantiate(respawnPrefab[num], respawn.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-
-
             }
         }
     }

@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 7530282306126557873}
   m_Layer: 0
   m_Name: Floor2
-  m_TagString: mazefloor
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,8 +132,8 @@ Transform:
   - {fileID: 7249571013381375195}
   - {fileID: 5416883953418266642}
   - {fileID: 3832096211179145064}
-  - {fileID: 7708944016887471780}
   - {fileID: 5976040928535943277}
+  - {fileID: 7708944016887471780}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -943,6 +943,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7530282306126557873}
     m_Modifications:
+    - target: {fileID: 100004, guid: e6e60fbde48eded45af1306d1a2cc222, type: 3}
+      propertyPath: m_Name
+      value: naturePack_flat_002 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e6e60fbde48eded45af1306d1a2cc222, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5470996
@@ -986,10 +990,6 @@ PrefabInstance:
     - target: {fileID: 400004, guid: e6e60fbde48eded45af1306d1a2cc222, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: e6e60fbde48eded45af1306d1a2cc222, type: 3}
-      propertyPath: m_Name
-      value: naturePack_flat_002 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e60fbde48eded45af1306d1a2cc222, type: 3}
@@ -1062,6 +1062,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7249571013381774937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7249571013381806329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 12bef70509e03454798b3e8313fbf3ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 7249571013381774937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7708944016887596068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1103,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71a60c64d7c47fb41ae9f34f15bf3ccf, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71a60c64d7c47fb41ae9f34f15bf3ccf, type: 3}
       propertyPath: m_LocalScale.y
@@ -1138,10 +1144,4 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 71a60c64d7c47fb41ae9f34f15bf3ccf,
     type: 3}
   m_PrefabInstance: {fileID: 7708944016887596068}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7249571013381806329 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 12bef70509e03454798b3e8313fbf3ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 7249571013381774937}
   m_PrefabAsset: {fileID: 0}
