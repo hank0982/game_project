@@ -24,6 +24,13 @@ public class MushroomAni : MonoBehaviour
         }
 
         //PlayerMovement();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        float dist = Vector3.Distance(player.transform.position, gameObject.transform.position);
+        if (dist < 20 && dist > 0)
+        {
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, player.transform.position, 0.03f);
+            gameObject.transform.forward = player.transform.forward * -1;
+        }
     }
 
     private void PlayerMovement()

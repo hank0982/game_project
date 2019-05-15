@@ -14,7 +14,7 @@ public class StoneMonJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnCollisionEnter(Collision collision)
     {
