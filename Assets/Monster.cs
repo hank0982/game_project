@@ -34,7 +34,7 @@ public class Monster : MonoBehaviour
 
     private void OnCollisionEnter(Collision hit)  //see web below for explanation
     {
-        Debug.Log(hit.gameObject);
+        //Debug.Log(hit.gameObject);
 
         if (hit.gameObject.tag == "Weapon") //you want to make that it's the player that is hitting the monster
       {
