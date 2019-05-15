@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DestroyChest : MonoBehaviour
 {
+
+    public GameObject[] weapons;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +23,56 @@ public class DestroyChest : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("Player get the box!");
+            BoxCollider collider = GetComponent<BoxCollider>();
+            collider.enabled = false;
+            int randomNum = Random.Range(0, 4);
+            
+            StartCoroutine(TemporarilyActivate(randomNum));
+
+            if (randomNum == 0)
+            {
+                if(PlayerPrefs.GetInt("SpearLevel") < 3)
+                {
+                    PlayerPrefs.SetInt("SpearLevel", (PlayerPrefs.GetInt("SpearLevel") + 1));
+                }
+            }
+            else if (randomNum == 1)
+            {
+                if (PlayerPrefs.GetInt("HammerLevel") < 3)
+                {
+                    PlayerPrefs.SetInt("HammerLevel", (PlayerPrefs.GetInt("HammerLevel") + 1));
+                }
+            }
+            else if (randomNum == 2)
+            {
+                if (PlayerPrefs.GetInt("SwordLevel") < 3)
+                {
+                    PlayerPrefs.SetInt("SwordLevel", (PlayerPrefs.GetInt("SwordLevel") + 1));
+                }
+            }
+            else if (randomNum == 3)
+            {
+                if (PlayerPrefs.GetInt("ShurikenLevel") < 3)
+                {
+                    PlayerPrefs.SetInt("ShurikenLevel", (PlayerPrefs.GetInt("ShurikenLevel") + 1));
+                }
+            }
+        }
+
+    }
+
+    private IEnumerator TemporarilyActivate(int weaponNum)
+    {
+        Debug.Log("Hero get: "+ weapons[weaponNum].gameObject);
+        weapons[weaponNum].gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
     }
 }
