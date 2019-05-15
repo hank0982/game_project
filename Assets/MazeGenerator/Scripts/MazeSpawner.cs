@@ -23,10 +23,13 @@ public class MazeSpawner : MonoBehaviour {
     public GameObject Pillar = null;
     public int Rows = 5;
     public int Columns = 5;
+    public int NumOfChest = 1;
     public float CellWidth = 5;
     public float CellHeight = 5;
     public bool AddGaps = true;
+    public GameObject ChestPrefab = null;
     public GameObject GoalPrefab = null;
+
 
     private BasicMazeGenerator mMazeGenerator = null;
 
@@ -99,7 +102,12 @@ public class MazeSpawner : MonoBehaviour {
                     tmp.transform.localScale += new Vector3(0, 3, 0);
                     tmp.transform.parent = transform;
                 }
-
+                /*if(row == column)
+                {
+                    tmp = Instantiate(ChestPrefab, new Vector3(x, 1, z), Quaternion.Euler(0, 0, 0)) as GameObject;
+                    tmp.transform.parent = transform;
+                    NumOfChest++;
+                }*/
                 if(row == Rows-1 && column == Columns-1){
                     tmp = Instantiate(GoalPrefab,new Vector3(x,1,z), Quaternion.Euler(0,0,0)) as GameObject;
                     tmp.transform.parent = transform;
