@@ -27,7 +27,7 @@ public class MazeSpawner : MonoBehaviour {
     public float CellWidth = 5;
     public float CellHeight = 5;
     public bool AddGaps = true;
-    public GameObject ChestPrefab = null;
+    //public GameObject ChestPrefab = null;
     public GameObject GoalPrefab = null;
 
 
