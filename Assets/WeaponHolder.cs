@@ -44,7 +44,6 @@ public class WeaponHolder : MonoBehaviour
             SelectWeapon();
             if (selectedWeapon != 2 && generatedPartial != null)
             {
-                Debug.Log(generatedPartial);
                 GameObject.DestroyImmediate(generatedPartial, true);
                 generatedPartial = null;
             }
@@ -125,7 +124,7 @@ public class WeaponHolder : MonoBehaviour
             {
                 if (generatedPartial != null && generatedPartial.name == "SwordLevelTwoFire")
                 {
-                    GameObject.   Immediate(generatedPartial, true);
+                    GameObject.DestroyImmediate(generatedPartial, true);
                     generatedPartial = null;
                 }
                 if (generatedPartial == null)
