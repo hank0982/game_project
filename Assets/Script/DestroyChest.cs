@@ -11,9 +11,9 @@ public class DestroyChest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int random = Random.Range(1, 100);
-        Debug.Log(random);
-        if(random % 7 != 0)
+        int random = Random.Range(1, 11);
+        // Debug.Log(random);
+        if(random == 2 || random == 5 || random == 8) // 70% of floor2 will have a chest 
         {
             Destroy(this.gameObject);
         }
