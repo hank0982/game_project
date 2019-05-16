@@ -35,6 +35,10 @@ public class MummyJump : MonoBehaviour
             }
             
         }
+        else
+        {
+            gameObject.transform.Rotate(0f, 10f, 0f);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

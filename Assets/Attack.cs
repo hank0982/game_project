@@ -40,13 +40,13 @@ public class Attack : MonoBehaviour
                 PlayerHP -= StoneAD * level;
             }
 
-            else if (hit.gameObject.name == "MushroomBottom")
+            if (hit.gameObject.name == "MushroomBottom")
             {
                 Debug.Log("Player hit by mushroom.");
                 PlayerHP -= MushroomAD * level;
             }
 
-            else if (hit.gameObject.name == "MummyBottom")
+            if (hit.gameObject.name == "MummyBottom")
             {
                 Debug.Log("Player hit by mummy.");
                 PlayerHP -= MummyAD * level;
