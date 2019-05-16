@@ -9,24 +9,7 @@ public class MonsterRandomGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //respawns = GameObject.FindGameObjectsWithTag("Floor");
-        //if (respawns.Length == 0)
-        //    Debug.Log("No game objects are tagged with 'Floor'");
-        //else
-        //{
-        //    foreach (GameObject respawn in respawns)
-        //    {
-        //        //if(Random.Range(0,5) > 3)
-        //        //{
-        //        //    GameObject monster = respawnPrefab[Random.Range(0, 3)];
-        //        //    Instantiate(monster, respawn.transform.position, respawn.transform.rotation);
-        //        //}
-        //        //GameObject monster = respawnPrefab[1];
-        //        //Instantiate(monster, respawn.transform.position, respawn.transform.rotation);
-        //        Debug.Log("respwans:" + respawn.transform.position);
-        //        Instantiate(respawnPrefab, respawn.transform.position, respawn.transform.rotation);
-        //    }
-        //}
+            
     }
 
     // Update is called once per frame
@@ -43,6 +26,11 @@ public class MonsterRandomGen : MonoBehaviour
             {
                 int num = Random.Range(0, respawnPrefab.Length + 1);
                 //Instantiate(respawnPrefab[num], respawn.transform.position, Quaternion.identity);
+                if (respawn.transform.position.x <= new Vector3(10, 0, 10).x)
+                    continue;
+                if (respawn.transform.position.z <= new Vector3(10, 0, 10).z)
+                    continue;
+                Debug.Log("pos:" + respawn.transform.position);
                 if (Random.Range(0, 100) > difficulty)
                     Instantiate(respawnPrefab[num], respawn.transform.position, Quaternion.identity);
             }

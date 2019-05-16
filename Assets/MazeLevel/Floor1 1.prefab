@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4012944113637141047}
   m_Layer: 0
   m_Name: Floor1 1
-  m_TagString: Floor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,10 @@ PrefabInstance:
       value: naturePack_057
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 200d613bf89dfed4696ff6a728329594, type: 3}
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}

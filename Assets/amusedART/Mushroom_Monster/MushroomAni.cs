@@ -20,16 +20,29 @@ public class MushroomAni : MonoBehaviour
         }
         else
         {
-            anim.Play("Idle");
+            anim.Play("Run");
         }
 
-        //PlayerMovement();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         float dist = Vector3.Distance(player.transform.position, gameObject.transform.position);
+
         if (dist < 20 && dist > 0)
         {
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, player.transform.position, 0.03f);
-            gameObject.transform.forward = player.transform.forward * -1;
+            Vector3 lookat = player.transform.position - gameObject.transform.position;
+
+
+            if (Physics.Raycast(gameObject.transform.position, lookat, out RaycastHit hit, 20))
+            {
+                if (hit.collider.name == "Player")
+                {
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, player.transform.position, 0.1f);
+                    lookat.y = 0;
+                    gameObject.transform.forward = lookat;
+                    Debug.Log("I see u");
+                }
+
+            }
+
         }
     }
 
