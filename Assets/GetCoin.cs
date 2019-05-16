@@ -22,6 +22,7 @@ public class GetCoin : MonoBehaviour
         {
             Debug.Log("get the coin!");
             PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
+            PlayerPrefs.Save();
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
         }

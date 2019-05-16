@@ -4655,7 +4655,7 @@ GameObject:
   - component: {fileID: 8694241878045083315}
   - component: {fileID: 8694241878044999443}
   m_Layer: 0
-  m_Name: CFX4 Fire
+  m_Name: CFX4Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

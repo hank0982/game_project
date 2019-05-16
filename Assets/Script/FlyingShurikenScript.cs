@@ -11,7 +11,7 @@ public class FlyingShurikenScript : MonoBehaviour
     {
         Destroy(gameObject, lifetime);
         int shurikenLevel = PlayerPrefs.GetInt("ShurikenLevel");
-        if (shurikenLevel == 1)
+        if (shurikenLevel > 1)
         {
             
             partical = (GameObject)Resources.Load("WeaponEffect/CFX_ElectricityBall", typeof(GameObject));
