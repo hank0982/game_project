@@ -38,7 +38,7 @@ public class MushroomAni : MonoBehaviour
                     gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, player.transform.position, 0.1f);
                     lookat.y = 0;
                     gameObject.transform.forward = lookat;
-                    Debug.Log("I see u");
+                    //Debug.Log("I see u");
                 }
 
             }

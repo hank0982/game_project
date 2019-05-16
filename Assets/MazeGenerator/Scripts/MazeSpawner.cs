@@ -134,13 +134,13 @@ public class MazeSpawner : MonoBehaviour {
                         }
                     }
                 }
-                float density = sum / neighbor;
+                float density = sum / neighbor-1;
                 if (x <=10 || z<= 10 && density < Density) { }
                 else
                 {
                     int level = PlayerPrefs.GetInt("level");
                     int difficulty = 60 - level * 8;
-                    int num = UnityEngine.Random.Range(0, 3);
+                    int num = UnityEngine.Random.Range(0, 10) % 3;
                     if (UnityEngine.Random.Range(0, 100) > difficulty)
                     {
                         Instantiate(respawnPrefab[num], new Vector3(x, 0, z), Quaternion.identity);
