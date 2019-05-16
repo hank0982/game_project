@@ -12,7 +12,7 @@ public class WeaponHolder : MonoBehaviour
     public Transform playerTransform;
     private bool isAttacking;
     public Image[] weapons;
-    private GameObject generatedPartial;
+    private int isParticalGenerated;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class WeaponHolder : MonoBehaviour
         PlayerPrefs.SetInt("SpearLevel", 1);
         PlayerPrefs.SetInt("HammerLevel", 1);
         PlayerPrefs.SetInt("ShurikenLevel", 1);
+        isParticalGenerated = -1;
     }
 
     // Update is called once per frame
@@ -42,10 +43,20 @@ public class WeaponHolder : MonoBehaviour
         if (previousSelectedWeapon != Math.Abs(selectedWeapon))
         {
             SelectWeapon();
-            if (selectedWeapon != 2 && generatedPartial != null)
+            Debug.Log(isParticalGenerated);
+            if (selectedWeapon != 2 && isParticalGenerated != -1)
             {
-                GameObject.DestroyImmediate(generatedPartial, true);
-                generatedPartial = null;
+                if(isParticalGenerated == 2)
+                {
+                    GameObject partical = GameObject.Find("SwordLevelTwoFire");
+                    Destroy(partical, 0.5f);
+                }
+                else
+                {
+                    GameObject partical = GameObject.Find("SwordLevelThreeFire");
+                    Destroy(partical, 0.5f);
+                }
+                isParticalGenerated = -1;
             }
         }
         AttackInput();
@@ -68,15 +79,14 @@ public class WeaponHolder : MonoBehaviour
         if (selectedWeapon == 3)
         {
             int ShurikenLevel = PlayerPrefs.GetInt("ShurikenLevel");
-            if(ShurikenLevel >= 2)
-            {
-                GameObject shootingWeapon = transform.GetChild(3).gameObject;
-                GameObject bullet = Instantiate(shootingWeapon, playerTransform.position + playerTransform.up * 0.5f + playerTransform.forward, Quaternion.identity);
-                bullet.AddComponent<Rigidbody>();
-                bullet.AddComponent<FlyingShurikenScript>();
-                bullet.GetComponent<Rigidbody>().mass = 1;
-                bullet.GetComponent<Rigidbody>().AddForce(playerTransform.forward * shurikenForwardForce);
-            }
+            GameObject shootingWeapon = transform.GetChild(3).gameObject;
+            GameObject bullet = Instantiate(shootingWeapon, playerTransform.position + playerTransform.up * 0.5f + playerTransform.forward, Quaternion.identity);
+            bullet.AddComponent<Rigidbody>();
+            bullet.AddComponent<FlyingShurikenScript>();
+            bullet.GetComponent<Rigidbody>().mass = 1;
+            bullet.GetComponent<Rigidbody>().AddForce(playerTransform.forward * shurikenForwardForce);
+            
+    
         }
         if (selectedWeapon == 0)
         {
@@ -112,31 +122,35 @@ public class WeaponHolder : MonoBehaviour
         if (selectedWeapon == 2)
         {
             int SwordLevel = PlayerPrefs.GetInt("SwordLevel");
-            if (SwordLevel == 2)
+            if (SwordLevel == 1)
             {
 
-                if (generatedPartial == null)
+                if (isParticalGenerated == -1)
                 {
-                    generatedPartial = (GameObject)Resources.Load("WeaponEffect/CFX4Fire", typeof(GameObject));
-                    generatedPartial.name = "SwordLevelTwoFire";
+                    GameObject generatedPartial = (GameObject)Resources.Load("WeaponEffect/CFX4Fire", typeof(GameObject));
                     GameObject Weapon = transform.GetChild(2).gameObject;
                     GameObject bullet = Instantiate(generatedPartial, Weapon.transform.position, Quaternion.identity);
                     bullet.transform.parent = playerTransform;
+                    bullet.name = "SwordLevelTwoFire";
+                    isParticalGenerated = 2;
                 }
             }
             else if (SwordLevel >2)
             {
-                if (generatedPartial != null && generatedPartial.name == "SwordLevelTwoFire")
+                if (isParticalGenerated == 2)
                 {
-                    GameObject.DestroyImmediate(generatedPartial, true);
-                    generatedPartial = null;
+                    GameObject partical = GameObject.Find("SwordLevelTwoFire");
+                    GameObject.DestroyImmediate(partical, true);
+                    isParticalGenerated = -1;
                 }
-                if (generatedPartial == null)
+                if (isParticalGenerated == -1)
                 {
-                    generatedPartial = (GameObject)Resources.Load("WeaponEffect/CFX3_Fire_Shield", typeof(GameObject));
+                    GameObject generatedPartial = (GameObject)Resources.Load("WeaponEffect/CFX3_Fire_Shield", typeof(GameObject));
                     GameObject Weapon = transform.GetChild(2).gameObject;
                     GameObject bullet = Instantiate(generatedPartial, playerTransform.position + playerTransform.forward, Quaternion.LookRotation(-playerTransform.forward));
                     bullet.transform.parent = playerTransform;
+                    bullet.name = "SwordLevelThreeFire"; 
+                    isParticalGenerated = 3;
                 }
                
             }
