@@ -37,7 +37,17 @@ public class Monster : MonoBehaviour
         //Debug.Log(hit.gameObject);
 
         if (hit.gameObject.tag == "Weapon") //you want to make that it's the player that is hitting the monster
-      {
+        {
+            if (hit.gameObject.name == "Shuriken01")
+            {
+
+            } else if (hit.gameObject.name == "Sword")
+            {
+
+            } else if (hit.gameObject.name == "Spear")
+            {
+
+            }
             MonHealth -= 10.0f;
 
             //If it influences it's strength, then factor it in like...
