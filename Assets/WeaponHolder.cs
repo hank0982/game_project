@@ -122,7 +122,7 @@ public class WeaponHolder : MonoBehaviour
         if (selectedWeapon == 2)
         {
             int SwordLevel = PlayerPrefs.GetInt("SwordLevel");
-            if (SwordLevel == 1)
+            if (SwordLevel == 2)
             {
 
                 if (isParticalGenerated == -1)
