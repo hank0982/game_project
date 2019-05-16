@@ -80,7 +80,7 @@ public class Monster : MonoBehaviour
             MonStrength -= 1; //so the strength will go down but slower then the health.
         }
 
-        if (MonHealth <= 0) //if the monster as no more health, destroy him...
+        if (MonHealth < 0) //if the monster as no more health, destroy him...
             Destroy(gameObject);
     }
     private void PositionHealthBar()
