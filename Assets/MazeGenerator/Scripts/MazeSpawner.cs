@@ -29,7 +29,8 @@ public class MazeSpawner : MonoBehaviour {
     public bool AddGaps = true;
     //public GameObject ChestPrefab = null;
     public GameObject GoalPrefab = null;
-
+    public GameObject[] respawnPrefab;
+    public float Density;
 
     private BasicMazeGenerator mMazeGenerator = null;
 
@@ -71,8 +72,10 @@ public class MazeSpawner : MonoBehaviour {
             break;
         }
         mMazeGenerator.GenerateMaze ();
+        int[,] monMap = new int[Rows,Columns];
         for (int row = 0; row < Rows; row++) {
             for(int column = 0; column < Columns; column++){
+                monMap[row, column] = 0;
                 float x = column*(CellWidth+(AddGaps?.2f:0));
                 float z = row*(CellHeight+(AddGaps?.2f:0));
                 MazeCell cell = mMazeGenerator.GetMazeCell(row,column);
@@ -112,6 +115,38 @@ public class MazeSpawner : MonoBehaviour {
                 if(row == Rows-1 && column == Columns-1){
                     tmp = Instantiate(GoalPrefab,new Vector3(x,1,z), Quaternion.Euler(0,0,0)) as GameObject;
                     tmp.transform.parent = transform;
+                }
+                //monsterGen
+                int sum = 0;
+                int neighbor = 0;
+                for(int i = -1; i < 2; i++)
+                {
+                    for(int j = -1; j < 2; j++)
+                    {
+                        if(row+i < 0 || row+i >= Rows || column+j < 0 || column+j >= Columns)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            sum += monMap[row + i, column + j];
+                            neighbor = neighbor + 1;
+                        }
+                    }
+                }
+                float density = sum / neighbor;
+                if (x <=10 || z<= 10 && density < Density) { }
+                else
+                {
+                    int level = PlayerPrefs.GetInt("level");
+                    int difficulty = 60 - level * 8;
+                    int num = UnityEngine.Random.Range(0, 3);
+                    if (UnityEngine.Random.Range(0, 100) > difficulty)
+                    {
+                        Instantiate(respawnPrefab[num], new Vector3(x, 0, z), Quaternion.identity);
+                        monMap[row, column] = 1;
+                    }
+
                 }
             }
         }
