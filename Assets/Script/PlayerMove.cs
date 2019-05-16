@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpMultiplier;
     [SerializeField] private KeyCode jumpKey;
 
+    private float sprint;
     private bool isJumping;
     private void Awake()
     {
@@ -21,18 +22,26 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        sprint = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerMovement();
+        if (Input.GetKeyDown("space"))
+        {
+            sprint = 2f;
+        }
+        if (Input.GetKeyUp("space"))
+        {
+            sprint = 1f;
+        }
     }
 
     private void PlayerMovement()
     {
-        float vertInput = Input.GetAxis(verticalInputName) * movementSpeed;
+        float vertInput = Input.GetAxis(verticalInputName) * movementSpeed * sprint;
         float horizInput = Input.GetAxis(horizontalInputName) * movementSpeed;
 
         Vector3 forwardMovement = transform.forward * vertInput;

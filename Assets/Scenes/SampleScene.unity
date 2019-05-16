@@ -669,7 +669,7 @@ MonoBehaviour:
   - {fileID: 1354501976}
   - {fileID: 462621567}
   - {fileID: 1208284573}
-  Density: 0.1
+  Density: 0.5
 --- !u!4 &446222942
 Transform:
   m_ObjectHideFlags: 0
@@ -714,7 +714,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 100000
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -755,8 +755,11 @@ MonoBehaviour:
   defaultHealth: 100
   KnockingDistancePerLevel: 500
   PlayerTransform: {fileID: 4086279418337117}
+  healthBar: {fileID: 0}
+  healthFill: {fileID: 0}
+  healthBarYOffset: 2
   monStrength: 0
-  monHealth: 0
+  monHealth: 100
 --- !u!1 &497396087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,7 +2315,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 10000
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2385,8 +2388,11 @@ MonoBehaviour:
   defaultHealth: 100
   KnockingDistancePerLevel: 499
   PlayerTransform: {fileID: 4086279418337117}
+  healthBar: {fileID: 0}
+  healthFill: {fileID: 0}
+  healthBarYOffset: 2
   monStrength: 0
-  monHealth: 0
+  monHealth: 100
 --- !u!114 &1208284578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,7 +2637,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 100000
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2686,8 +2692,11 @@ MonoBehaviour:
   defaultHealth: 100
   KnockingDistancePerLevel: 500
   PlayerTransform: {fileID: 4086279418337117}
+  healthBar: {fileID: 0}
+  healthFill: {fileID: 0}
+  healthBarYOffset: 2
   monStrength: 0
-  monHealth: 0
+  monHealth: 100
 --- !u!1 &1493908898
 GameObject:
   m_ObjectHideFlags: 0

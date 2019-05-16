@@ -145,6 +145,7 @@ public class MazeSpawner : MonoBehaviour {
                     {
                         Instantiate(respawnPrefab[num], new Vector3(x, 0, z), Quaternion.identity);
                         monMap[row, column] = 1;
+                        Debug.Log("generate monster #" + num + "     difficulty: " + difficulty);
                     }
 
                 }
