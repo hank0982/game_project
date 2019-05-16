@@ -7,7 +7,7 @@ public class GetCoin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Coin at: "+transform.position);
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class GetCoin : MonoBehaviour
         {
             Debug.Log("get the coin!");
             PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
+            PlayerPrefs.Save();
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
         }
