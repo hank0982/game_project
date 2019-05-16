@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Monster : MonoBehaviour
 {
 
@@ -10,6 +10,9 @@ public class Monster : MonoBehaviour
     public float defaultHealth = 100.0f;
     public int KnockingDistancePerLevel = 500;
     public Transform PlayerTransform;
+    public Transform healthBar;
+    public Slider healthFill;
+    public float healthBarYOffset = 2;
     //variables that will be used during combat
     public int monStrength;
     public int MonStrength
@@ -28,11 +31,14 @@ public class Monster : MonoBehaviour
     private void Start()
     {
         int level = PlayerPrefs.GetInt("level");
-
+        healthFill.value = MonHealth / defaultHealth;
         monStrength = defaultStrenght;
         monHealth = defaultHealth;
     }
-
+    void update()
+    {
+        PositionHealthBar();
+    }
     private void OnCollisionEnter(Collision hit)  //see web below for explanation
     {
         //Debug.Log(hit.gameObject);
@@ -56,7 +62,7 @@ public class Monster : MonoBehaviour
                 damage = damage * 4 + SpearLevel * 10;
             }
             else
-            {   
+            {
                 int HammerLevel = PlayerPrefs.GetInt("HammerLevel");
                 damage = damage * 5 + HammerLevel * 5;
                 if (HammerLevel >= 2)
@@ -69,12 +75,18 @@ public class Monster : MonoBehaviour
                 }
             }
             MonHealth -= damage;
-
+            healthFill.value = MonHealth / defaultHealth;
             //If it influences it's strength, then factor it in like...
             MonStrength -= 1; //so the strength will go down but slower then the health.
-     }
+        }
 
-        if (MonHealth < 0) //if the monster as no more health, destroy him...
+        if (MonHealth <= 0) //if the monster as no more health, destroy him...
             Destroy(gameObject);
-  }
+    }
+    private void PositionHealthBar()
+    {
+        Vector3 currentPosition = transform.position;
+        healthBar.position = new Vector3(currentPosition.x, currentPosition.y + healthBarYOffset, currentPosition.z);
+        healthBar.LookAt(Camera.main.transform);
+    }
 }
