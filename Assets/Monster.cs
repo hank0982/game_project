@@ -8,7 +8,8 @@ public class Monster : MonoBehaviour
     //declare variable for default values...
     public int defaultStrenght = 100;
     public float defaultHealth = 100.0f;
-
+    public int KnockingDistancePerLevel = 500;
+    public Transform PlayerTransform;
     //variables that will be used during combat
     public int monStrength;
     public int MonStrength
@@ -41,21 +42,33 @@ public class Monster : MonoBehaviour
             float damage = 1.0f;
             if (hit.gameObject.name == "Shuriken01")
             {
-
-            } else if (hit.gameObject.name == "Sword")
+                int ShurikenLevel = PlayerPrefs.GetInt("ShurikenLevel");
+                damage = damage * 5 + ShurikenLevel * 3;
+            }
+            else if (hit.gameObject.name == "Sword")
             {
                 int SwordLevel = PlayerPrefs.GetInt("SwordLevel");
-                damage = damage * 10 + SwordLevel * 5;
+                damage = damage * 5 + SwordLevel * 6;
             }
             else if (hit.gameObject.name == "Spear")
             {
-
+                int SpearLevel = PlayerPrefs.GetInt("SpearLevel");
+                damage = damage * 4 + SpearLevel * 10;
             }
             else
-            {
-
+            {   
+                int HammerLevel = PlayerPrefs.GetInt("HammerLevel");
+                damage = damage * 5 + HammerLevel * 5;
+                if (HammerLevel >= 2)
+                {
+                    int possiblityToHitFarAway = Random.Range(0, 100);
+                    if (possiblityToHitFarAway < (HammerLevel - 1) * 10)
+                    {
+                        GetComponent<Rigidbody>().AddForce(GetComponent<Rigidbody>().mass * PlayerTransform.forward * KnockingDistancePerLevel);
+                    }
+                }
             }
-            MonHealth -= 10.0f;
+            MonHealth -= damage;
 
             //If it influences it's strength, then factor it in like...
             MonStrength -= 1; //so the strength will go down but slower then the health.
