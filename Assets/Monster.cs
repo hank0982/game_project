@@ -38,13 +38,20 @@ public class Monster : MonoBehaviour
 
         if (hit.gameObject.tag == "Weapon") //you want to make that it's the player that is hitting the monster
         {
+            float damage = 1.0f;
             if (hit.gameObject.name == "Shuriken01")
             {
 
             } else if (hit.gameObject.name == "Sword")
             {
+                int SwordLevel = PlayerPrefs.GetInt("SwordLevel");
+                damage = damage * 10 + SwordLevel * 5;
+            }
+            else if (hit.gameObject.name == "Spear")
+            {
 
-            } else if (hit.gameObject.name == "Spear")
+            }
+            else
             {
 
             }
