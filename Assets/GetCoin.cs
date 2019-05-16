@@ -7,7 +7,7 @@ public class GetCoin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Coin at: "+transform.position);
     }
 
     // Update is called once per frame
