@@ -67,12 +67,16 @@ public class WeaponHolder : MonoBehaviour
         
         if (selectedWeapon == 3)
         {
-            GameObject shootingWeapon = transform.GetChild(3).gameObject;
-            GameObject bullet = Instantiate(shootingWeapon, playerTransform.position + playerTransform.up * 0.5f + playerTransform.forward, Quaternion.identity);
-            bullet.AddComponent<Rigidbody>();
-            bullet.AddComponent<FlyingShurikenScript>();
-            bullet.GetComponent<Rigidbody>().mass = 1;
-            bullet.GetComponent<Rigidbody>().AddForce(playerTransform.forward * shurikenForwardForce);
+            int ShurikenLevel = PlayerPrefs.GetInt("ShurikenLevel");
+            if(ShurikenLevel >= 2)
+            {
+                GameObject shootingWeapon = transform.GetChild(3).gameObject;
+                GameObject bullet = Instantiate(shootingWeapon, playerTransform.position + playerTransform.up * 0.5f + playerTransform.forward, Quaternion.identity);
+                bullet.AddComponent<Rigidbody>();
+                bullet.AddComponent<FlyingShurikenScript>();
+                bullet.GetComponent<Rigidbody>().mass = 1;
+                bullet.GetComponent<Rigidbody>().AddForce(playerTransform.forward * shurikenForwardForce);
+            }
         }
         if (selectedWeapon == 0)
         {
@@ -108,7 +112,7 @@ public class WeaponHolder : MonoBehaviour
         if (selectedWeapon == 2)
         {
             int SwordLevel = PlayerPrefs.GetInt("SwordLevel");
-            if (SwordLevel == 0)
+            if (SwordLevel == 2)
             {
 
                 if (generatedPartial == null)
@@ -120,7 +124,7 @@ public class WeaponHolder : MonoBehaviour
                     bullet.transform.parent = playerTransform;
                 }
             }
-            else if (SwordLevel ==1)
+            else if (SwordLevel >2)
             {
                 if (generatedPartial != null && generatedPartial.name == "SwordLevelTwoFire")
                 {
