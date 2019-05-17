@@ -37,7 +37,7 @@ public class Monster : MonoBehaviour
     }
     void update()
     {
-        //PositionHealthBar();
+        PositionHealthBar();
     }
     private void OnCollisionEnter(Collision hit)  //see web below for explanation
     {
@@ -83,10 +83,10 @@ public class Monster : MonoBehaviour
         if (MonHealth < 0) //if the monster as no more health, destroy him...
             Destroy(gameObject);
     }
-    //private void PositionHealthBar()
-    //{
-    //    Vector3 currentPosition = transform.position;
-    //    healthBar.position = new Vector3(currentPosition.x, currentPosition.y + healthBarYOffset, currentPosition.z);
-    //    healthBar.LookAt(Camera.main.transform);
-    //}
+    private void PositionHealthBar()
+    {
+       Vector3 currentPosition = transform.position;
+       healthBar.position = new Vector3(currentPosition.x, currentPosition.y + healthBarYOffset, currentPosition.z);
+        healthBar.LookAt(Camera.main.transform);
+    }
 }

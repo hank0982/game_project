@@ -16,6 +16,7 @@ TagManager:
   - MummyBottom
   - MushroomBottom
   - MonsterBottom
+  - MonsterFire
   layers:
   - Default
   - TransparentFX

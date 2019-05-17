@@ -143,7 +143,7 @@ public class MazeSpawner : MonoBehaviour {
                     int num = UnityEngine.Random.Range(0, 10) % 3;
                     if (UnityEngine.Random.Range(0, 100) > difficulty)
                     {
-                        Instantiate(respawnPrefab[num], new Vector3(x, 0, z), Quaternion.identity);
+                        Instantiate(respawnPrefab[num], new Vector3(x, 1, z), Quaternion.identity);
                         monMap[row, column] = 1;
                         Debug.Log("generate monster #" + num + "     difficulty: " + difficulty);
                     }
