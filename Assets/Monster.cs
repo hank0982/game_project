@@ -48,8 +48,7 @@ public class Monster : MonoBehaviour
             float damage = 1.0f;
             if (hit.gameObject.name == "Shuriken01")
             {
-                int ShurikenLevel = PlayerPrefs.GetInt("ShurikenLevel");
-                damage = damage * 5 + ShurikenLevel * 3;
+                damage = 1;
             }
             else if (hit.gameObject.name == "Sword")
             {
@@ -59,16 +58,16 @@ public class Monster : MonoBehaviour
             else if (hit.gameObject.name == "Spear")
             {
                 int SpearLevel = PlayerPrefs.GetInt("SpearLevel");
-                damage = damage * 4 + SpearLevel * 10;
+                damage = damage * 4 + SpearLevel * 4;
             }
             else
             {
                 int HammerLevel = PlayerPrefs.GetInt("HammerLevel");
-                damage = damage * 5 + HammerLevel * 5;
+                damage = damage * 5 + HammerLevel * 6;
                 if (HammerLevel >= 2)
                 {
                     int possiblityToHitFarAway = Random.Range(0, 100);
-                    if (possiblityToHitFarAway < (HammerLevel - 1) * 10)
+                    if (possiblityToHitFarAway < (HammerLevel) * 40)
                     {
                         GetComponent<Rigidbody>().AddForce(GetComponent<Rigidbody>().mass * PlayerTransform.forward * KnockingDistancePerLevel);
                     }

@@ -19,6 +19,10 @@ public class FlyingShurikenScript : MonoBehaviour
             obj.transform.parent = transform;
         }
     }
+    private void OnCollisionEnter(Collision hit)  //see web below for explanation
+    {
+        Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {

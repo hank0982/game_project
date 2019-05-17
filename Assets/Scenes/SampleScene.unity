@@ -1194,7 +1194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391582771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.672, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1354501981}
@@ -1211,8 +1211,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7941742, y: 0.08667755, z: 0.66245747}
-  m_Center: {x: 0.0019454956, y: -0.051792145, z: 0.010906696}
+  m_Size: {x: 0.32165527, y: 1.0093384, z: 0.84420013}
+  m_Center: {x: -0.009674072, y: -0.1483612, z: 0.10177803}
 --- !u!1 &446222940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +2474,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 473fd5b335ffd7448896c5b1f4183686, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.58
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3335,8 +3335,8 @@ MonoBehaviour:
   MushroomAD: 10
   StoneAD: 10
   MummyAD: 10
-  PlayerHP: 100
-  DefaultHP: 100
+  PlayerHP: 300
+  DefaultHP: 300
   healthBar: {fileID: 2025558001}
 --- !u!114 &1150400956
 MonoBehaviour:
@@ -3500,14 +3500,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultStrenght: 100
-  defaultHealth: 100
+  defaultHealth: 20
   KnockingDistancePerLevel: 499
   PlayerTransform: {fileID: 4086279418337117}
   healthBar: {fileID: 969860699}
   healthFill: {fileID: 1498998353}
   healthBarYOffset: 2
   monStrength: 0
-  monHealth: 100
+  monHealth: 20
 --- !u!114 &1208284578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3808,14 +3808,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultStrenght: 100
-  defaultHealth: 100
+  defaultHealth: 20
   KnockingDistancePerLevel: 500
   PlayerTransform: {fileID: 4086279418337117}
   healthBar: {fileID: 559666210}
   healthFill: {fileID: 814029231}
   healthBarYOffset: 2
   monStrength: 0
-  monHealth: 100
+  monHealth: 20
 --- !u!1 &1463366094
 GameObject:
   m_ObjectHideFlags: 0
@@ -5646,6 +5646,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.653
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854703132, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854703132, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811811775854703132, guid: 2bc8a3997d648bd4a8b192ecc18057de,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bc8a3997d648bd4a8b192ecc18057de, type: 3}
