@@ -16,7 +16,7 @@ public class DestroyChest : MonoBehaviour
         int level = PlayerPrefs.GetInt("level");
         if(random > 10 + (5-level) * 5) 
         {
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
